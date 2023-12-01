@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="container">
+
+            <h1 class="heading">Weather App</h1>
+
+            <form data-form>
+                <input type="text" placeholder="Enter City Name" id="searchCity">
+                
+                <button type="submit" class="submitBtn">
+                    <img src="./assests/search.png" width="23" height="20"> 
+                </button>
+            </form>
+
+            <div class="city-flag">
+                <span id="cityName"></span>
+                <img id="countryFlag" width="18" height="18">
+                
+            </div>
+
+            <!--show temparature-->
+            <p id="showTemp"></p>
+
+            <!--show weather images-->
+            <img data-cloudImg class="weather-Img" width="80" height="80">
+
+            <div id="mainDiv">
+                <div class="boxes">
+                    <p>WIND SPEED</p>
+                    <p id="WindSpeed"></p>
+                </div>
+
+                <div class="boxes">
+                    <p>HUMIDITY</p>
+                    <p id="Humidity"></p>
+                </div>
+
+                <div class="boxes">
+                    <p>CLOUDINESS</p>
+                    <p id="showCloud"></p>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
