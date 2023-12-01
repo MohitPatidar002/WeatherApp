@@ -67,6 +67,7 @@ form{
 #mainDiv{
     display: flex;
     gap: 20px;
+    justify-content: center;
     text-align: center;
     color: black;
     opacity: 0;
