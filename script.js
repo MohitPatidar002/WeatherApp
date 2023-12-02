@@ -9,6 +9,7 @@ let submitForm = document.querySelector('[data-form]');
 let inputvalue = document.querySelector('#searchCity');
 let cityName = document.querySelector('#cityName');  
 let countryflag = document.querySelector('#countryFlag');
+let loadingImg = document.querySelector('#loadingImg');
 let api = '3a88fa84b7d2ded2999d4212a3b2a9e8';
 
 
@@ -27,10 +28,20 @@ submitForm.addEventListener('submit', (e) => {
 
 
 async function showWeatherData(city){
+    loadingImg.classList.add('active');
+    cityName.classList.remove('active');
+    countryflag.classList.remove('active');
+    cloudImg.classList.remove('active');
+    box.classList.remove('active');
+    TempDisplay .classList.remove('active');
+
+
     let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}&units=metric`);
     let data = await response.json();
     console.log(data);
     
+    loadingImg.classList.remove('active');
+    TempDisplay .classList.add('active');
     cityName.classList.add('active');
     countryflag.classList.add('active');
     cloudImg.classList.add('active');
