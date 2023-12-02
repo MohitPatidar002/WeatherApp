@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="./assests/favicon.png">
 </head>
 <body>
     
@@ -14,39 +15,47 @@
             <h1 class="heading">Weather App</h1>
 
             <form data-form>
-                <input type="text" placeholder="Enter City Name" id="searchCity">
+                <input type="text" placeholder="Enter City Name" id="searchCity" autocomplete="off">
                 
                 <button type="submit" class="submitBtn">
-                    <img src="./assests/search.png" width="23" height="20"> 
+                    <img src="./assests/search.png" width="25" height="22"> 
                 </button>
             </form>
 
-            <div class="city-flag">
-                <span id="cityName"></span>
-                <img id="countryFlag" width="18" height="18">
-                
-            </div>
-
-            <!--show temparature-->
-            <p id="showTemp"></p>
-
-            <!--show weather images-->
-            <img data-cloudImg class="weather-Img" width="80" height="80">
-
-            <div id="mainDiv">
-                <div class="boxes">
-                    <p>WIND SPEED</p>
-                    <p id="WindSpeed"></p>
+            <div class="weatherData">
+                <div class="city-flag">
+                    <span id="cityName"></span>
+                    <img id="countryFlag" width="18" height="18">
+                    
                 </div>
 
-                <div class="boxes">
-                    <p>HUMIDITY</p>
-                    <p id="Humidity"></p>
-                </div>
+                <!--show temparature-->
+                <p id="showTemp"></p>
 
-                <div class="boxes">
-                    <p>CLOUDINESS</p>
-                    <p id="showCloud"></p>
+                <p id="showCloud"></p>
+                <!--show weather images-->
+                <img data-cloudImg class="weather-Img" width="80" height="70">
+
+                <div id="mainDiv">
+                    <div class="boxes">
+                        <img src="./assests/wind.png" alt="" width="30" height="30" class="windImg">
+                        <p>WIND SPEED</p>
+                        <p id="WindSpeed"></p>
+                    </div>
+
+                    <div class="boxes">
+                        <img src="./assests/humidity.png" alt="" width="30" height="30" class="humidity">
+                        <p>HUMIDITY</p>
+                        <p id="Humidity"></p>
+                    </div>
+
+                    <div class="boxes">
+                        <img src="./assests/cloud.png" alt="" width="30" height="30" class="clouds">
+                        <p>CLOUDS</p>
+                        <p id="cloudPercent"></p>
+                    </div>
+
+                    
                 </div>
 
                 
