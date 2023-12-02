@@ -48,6 +48,15 @@ form{
 .submitBtn{
     border: none;
     outline: none;
+    cursor: pointer;
+}
+
+.weatherData{
+    display: none;
+}
+
+.weatherData.active{
+    display: block;
 }
 
 .city-flag{
@@ -58,16 +67,11 @@ form{
     font-size: 25px;
     font-weight: 600;
     margin-right: 5px;
-    opacity: 0;
 }
 
 #showTemp{
-    font-size: 55px;
-    display: none;
-}
-
-#showTemp.active{
-    display: block;
+    font-size: 45px;
+    font-weight: 600;
 }
 
 #mainDiv{
@@ -76,42 +80,19 @@ form{
     justify-content: center;
     text-align: center;
     color: black;
-    opacity: 0;
     flex-wrap: wrap;
-}
-
-#mainDiv.active{
-    opacity: 1;
 }
 
 .boxes{
     background-color: #B4BDFF;
     padding: 10px;
+    width: 9rem;
 }
 
-.boxes p:nth-child(2){
+.boxes p:nth-child(2),:nth-child(3){
     padding-top: 5px;
 }
 
-#countryFlag{
-    opacity: 0;
-}
-
-#countryFlag.active{
-    opacity: 1;
-}
-
-#cityName.active{
-    opacity: 1;
-}
-
-.weather-Img{
-    display: none;
-}
-
-.weather-Img.active{
-    display: inline;
-}
 
 #loadingImg{
     background-color: transparent;
@@ -121,3 +102,4 @@ form{
 #loadingImg.active{
     display: block;
 }
+
